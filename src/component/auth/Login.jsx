@@ -7,6 +7,10 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const handleLogin = (e) => {
+    if ( !email || !password ) {
+      alert("Please fill all required fields.");
+      return;
+    }
     e.preventDefault();
     const userData = {
       email,
